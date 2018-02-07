@@ -41,7 +41,7 @@ function buildTable(results){
 			if(file_type == 'simple'){
 				var name = cells[3].toLowerCase();
 				name = name.split(' ').join('-');
-				var stringToPush = [cells[0], '', 'Default', 'simple', cells[4], 'pk', cells[3], cells[6], cells[5],  '1', '1', 'Taxable Goods', '"Catalog, Search"', cells[7],  '', '', '',cells[8].toLowerCase() + '-' + name ,  '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', cells[1], '', '','',cells[10], '1', '1', '0', '0', '1', '1', '0', '0',  '1', '1', '', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', 'no', 'no',  '', '', '', '', '', '', '', '', '', cells[11], cells[12], cells[8]+'.jpg', cells[8]+'.jpg', cells[8]+'.jpg', image_string, '' ,cells[12].toLowerCase(), cells[13]];
+				var stringToPush = [cells[0], '', 'Default', 'simple', cells[4], 'pk', cells[3], cells[6], cells[5],  '1', '1', 'Taxable Goods', '"Catalog, Search"', cells[7],  '', '', '',cells[8].toLowerCase() + '-' + name ,  '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', cells[14], cells[1], '', '','',cells[10], '1', '1', '0', '0', '1', '1', '0', '0',  '1', '1', '', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', 'no', 'no',  '', '', '', '', '', '', '', '', '', cells[11], cells[12], cells[8]+'.jpg', cells[8]+'.jpg', cells[8]+'.jpg', image_string, '' ,cells[12].toLowerCase(), cells[13]];
 				new_csv.push(stringToPush);
 			} else {
 				if(cells[2] == ''){
@@ -49,7 +49,7 @@ function buildTable(results){
 					sku_string += "\"";
 					var name = cells[3].toLowerCase();
 					name = name.split(' ').join('-');
-					var stringToPush = [cells[0], '', 'Default', 'configurable', cells[4], 'base', cells[3], cells[6], cells[5],  '1', '1', 'Taxable Goods', '"Catalog, Search"', cells[7],  '', '', '',cells[8].toLowerCase() + '-' + name ,  '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', cells[1], '', '',sku_string, cells[10], '1', '1', '0', '0', '1', '1', '0', '0',  '1', '1', '', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', 'no', 'no',  '', '', '', '', '', '', '', '', '', cells[11], cells[12], cells[8]+'.jpg', cells[8]+'.jpg', cells[8]+'.jpg', image_string, '' ,cells[12].toLowerCase(), ''];
+					var stringToPush = [cells[0], '', 'Default', 'configurable', cells[4], 'base', cells[3], cells[6], cells[5],  '1', '1', 'Taxable Goods', '"Catalog, Search"', cells[7],  '', '', '',cells[8].toLowerCase() + '-' + name ,  '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', cells[14], cells[1], '', '',sku_string, cells[10], '1', '1', '0', '0', '1', '1', '0', '0',  '1', '1', '', '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', 'no', 'no',  '', '', '', '', '', '', '', '', '', cells[11], cells[12], cells[8]+'.jpg', cells[8]+'.jpg', cells[8]+'.jpg', image_string, '' ,cells[12].toLowerCase(), ''];
 					if(brand  == 'Zeen'){
 						stringToPush[5] = 'pk';
 						stringToPush.push(cells[13]);
@@ -61,7 +61,7 @@ function buildTable(results){
 					sku_string += 'sku=' + cells[0] + ',' + 'size=' + cells[2] + '|';
 					var name = cells[3].toLowerCase();
 					name = name.split(' ').join('-');
-					var stringToPush = [cells[0], '' , 'Default', 'simple', cells[4], 'base', cells[3], cells[6], cells[5], '1', '1', 'Taxable Goods', 'Not Visible Individually', cells[7], '', '', '', cells[8].toLowerCase() + '-'  + name , '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', cells[1], cells[2], '', '',  cells[10], '1', '1', '0', '0', '1', '1', '0', '0', '1', '1', '',  '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', 'no', 'no', '', '', '', '', '', '', '', '', '', cells[11], cells[12], cells[8]+'.jpg', cells[8]+'.jpg', cells[8]+'.jpg', image_string, '',cells[12].toLowerCase(), ''];
+					var stringToPush = [cells[0], '' , 'Default', 'simple', cells[4], 'base', cells[3], cells[6], cells[5], '1', '1', 'Taxable Goods', 'Not Visible Individually', cells[7], '', '', '', cells[8].toLowerCase() + '-'  + name , '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', cells[14], cells[1], cells[2], '', '',  cells[10], '1', '1', '0', '0', '1', '1', '0', '0', '1', '1', '',  '1', '1', '1', '1', '1', '1', '0', '0', '1', '0', '1', 'no', 'no', '', '', '', '', '', '', '', '', '', cells[11], cells[12], cells[8]+'.jpg', cells[8]+'.jpg', cells[8]+'.jpg', image_string, '',cells[12].toLowerCase(), ''];
 					if(brand  == 'Zeen'){
 						stringToPush[5] = 'pk';
 						stringToPush.push(cells[13]);
