@@ -14,29 +14,25 @@ function buildTable(results){
 	for(var i in data){
 		var str = data[i][0];
 		var result = str.replace(/"[^"]+"/g, function (match) {
-    return match.replace(/,/g, '|');
-	});
-	data[i][0] = result;
-	var row = data[i];
+			return match.replace(/,/g, '|');
+		});
+		data[i][0] = result;
+		var row = data[i];
 		var cells = row.join(",").split(",");
 		for(var i in cells){
 			cells[i] = cells[i].split('|').join(',');
 		}
 		if(cells.length > 1){
-			if(cells[8] == image_name || cells[2] == ''){
-
-			} else {
-				image_string = '';
-				image_string += "\"";
-				image_name = cells[8];
-				for(var i=0;i<cells[9];i++){
-					image_string += image_name + image_appenders[i] + '.jpg';
-					if(i < cells[9]-1){
-						image_string += ',';
-					}
+			image_string = '';
+			image_string += "\"";
+			image_name = cells[8];
+			for(var i=0;i<cells[9];i++){
+				image_string += image_name + image_appenders[i] + '.jpg';
+				if(i < cells[9]-1){
+					image_string += ',';
 				}
-				image_string+= "\"";
 			}
+			image_string+= "\"";
 
 			if(file_type == 'simple'){
 				var name = cells[3].toLowerCase();
@@ -75,7 +71,7 @@ function buildTable(results){
 	if(brand == 'Zeen'){
 		var header = 'sku,store_view_code,attribute_set_code,product_type,categories,product_websites,name,description,short_description,weight,product_online,tax_class_name,visibility,price,special_price,special_price_from_date,special_price_to_date,url_key,created_at,updated_at,new_from_date,new_to_date,display_product_options_in,map_price,msrp_price,map_enabled,gift_message_available,custom_design,custom_design_from,custom_design_to,custom_layout_update,page_layout,product_options_container,msrp_display_actual_price_type,country_of_manufacture,related_skus,color,size,additional_attributes,configurable_variations,qty,out_of_stock_qty,use_config_min_qty,is_qty_decimal,allow_backorders,use_config_backorders,min_cart_qty,use_config_min_sale_qty,max_cart_qty,use_config_max_sale_qty,is_in_stock,notify_on_stock_below,use_config_notify_stock_qty,manage_stock,use_config_manage_stock,use_config_qty_increments,qty_increments,use_config_enable_qty_inc,enable_qty_increments,is_decimal_divided,website_id,deferred_stock_update,use_config_deferred_stock_update,pre_order,pre_order_msg,upsell_skus,hide_from_product_page,custom_options,bundle_price_type,bundle_sku_type,bundle_price_view,bundle_weight_type,bundle_values,associated_skus,manufacturer_brand,mgs_brand,base_image,small_image,thumbnail_image,additional_images,product_colors_skus,size_chart_link,piece,fit_and_finish,marketing_attribute_1,marketing_attribute_2,marketing_attribute_3,marketing_attribute_4,meta_description,meta_keyword,meta_title';
 	} else if(brand == 'Servis'){
-			var header = 'sku,store_view_code,attribute_set_code,product_type,categories,product_websites,name,description,short_description,weight,product_online,tax_class_name,visibility,price,special_price,special_price_from_date,special_price_to_date,url_key,created_at,updated_at,new_from_date,new_to_date,display_product_options_in,map_price,msrp_price,map_enabled,gift_message_available,custom_design,custom_design_from,custom_design_to,custom_layout_update,page_layout,product_options_container,msrp_display_actual_price_type,country_of_manufacture,related_skus,color,size,additional_attributes,configurable_variations,qty,out_of_stock_qty,use_config_min_qty,is_qty_decimal,allow_backorders,use_config_backorders,min_cart_qty,use_config_min_sale_qty,max_cart_qty,use_config_max_sale_qty,is_in_stock,notify_on_stock_below,use_config_notify_stock_qty,manage_stock,use_config_manage_stock,use_config_qty_increments,qty_increments,use_config_enable_qty_inc,enable_qty_increments,is_decimal_divided,website_id,deferred_stock_update,use_config_deferred_stock_update,pre_order,pre_order_msg,upsell_skus,hide_from_product_page,custom_options,bundle_price_type,bundle_sku_type,bundle_price_view,bundle_weight_type,bundle_values,associated_skus,manufacturer_brand,mgs_brand,base_image,small_image,thumbnail_image,additional_images,product_colors_skus,size_chart_link';
+		var header = 'sku,store_view_code,attribute_set_code,product_type,categories,product_websites,name,description,short_description,weight,product_online,tax_class_name,visibility,price,special_price,special_price_from_date,special_price_to_date,url_key,created_at,updated_at,new_from_date,new_to_date,display_product_options_in,map_price,msrp_price,map_enabled,gift_message_available,custom_design,custom_design_from,custom_design_to,custom_layout_update,page_layout,product_options_container,msrp_display_actual_price_type,country_of_manufacture,related_skus,color,size,additional_attributes,configurable_variations,qty,out_of_stock_qty,use_config_min_qty,is_qty_decimal,allow_backorders,use_config_backorders,min_cart_qty,use_config_min_sale_qty,max_cart_qty,use_config_max_sale_qty,is_in_stock,notify_on_stock_below,use_config_notify_stock_qty,manage_stock,use_config_manage_stock,use_config_qty_increments,qty_increments,use_config_enable_qty_inc,enable_qty_increments,is_decimal_divided,website_id,deferred_stock_update,use_config_deferred_stock_update,pre_order,pre_order_msg,upsell_skus,hide_from_product_page,custom_options,bundle_price_type,bundle_sku_type,bundle_price_view,bundle_weight_type,bundle_values,associated_skus,manufacturer_brand,mgs_brand,base_image,small_image,thumbnail_image,additional_images,product_colors_skus,size_chart_link';
 	}
 
 
