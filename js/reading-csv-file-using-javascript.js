@@ -75,31 +75,31 @@ function buildTable(results){
 	}
 
 
-	// for(var i in new_csv){
-	// 	var string = '';
-	// 	string+= "\"";
-	// 	var lastIndex = new_csv[i][0].lastIndexOf('-');
-	// 	if(lastIndex != - 1){
-	// 		var code = new_csv[i][0].slice(0, lastIndex);
-	// 		var x = false;
-	// 		for(var j in new_csv){
-	// 			var subLastIndex  = new_csv[j][0].lastIndexOf('-');
-	// 			if(subLastIndex != -1){
-	// 				var sub_code = new_csv[j][0].slice(0,subLastIndex);
-	// 				if(code == sub_code){
-	// 					x = true;
-	// 					string+= new_csv[j][0];
-	// 					string += ',';
-	// 				}
-	// 			}
-	// 		}
-	// 		if(x){
-	// 			string = string.slice(0, -1);
-	// 			string += "\"";
-	// 			new_csv[i][80] = string;
-	// 		}
-	// 	}
-	// }
+	for(var i in new_csv){
+		var string = '';
+		string+= "\"";
+		var lastIndex = new_csv[i][0].lastIndexOf('-');
+		if(lastIndex != - 1){
+			var code = new_csv[i][0].slice(0, lastIndex);
+			var x = false;
+			for(var j in new_csv){
+				var subLastIndex  = new_csv[j][0].lastIndexOf('-');
+				if(subLastIndex != -1){
+					var sub_code = new_csv[j][0].slice(0,subLastIndex);
+					if(code == sub_code && new_csv[j][0] != new_csv[i][0]){
+						x = true;
+						string+= new_csv[j][0];
+						string += ',';
+					}
+				}
+			}
+			if(x){
+				string = string.slice(0, -1);
+				string += "\"";
+				new_csv[i][80] = string;
+			}
+		}
+	}
 
 
 	var csv = header + '\n';
